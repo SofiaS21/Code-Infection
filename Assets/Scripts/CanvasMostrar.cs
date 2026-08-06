@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecolectarObjeto : MonoBehaviour
+public class CanvasMostrar : MonoBehaviour
 {
       private Camera cam;
 
@@ -15,4 +15,5 @@ public class RecolectarObjeto : MonoBehaviour
     {
         transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,     cam.transform.rotation * Vector3.up);
     }
+    
 }
