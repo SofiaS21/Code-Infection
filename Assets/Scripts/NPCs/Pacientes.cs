@@ -13,6 +13,13 @@ public class Pacientes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(itemJugador == medicamentoCorrecto)
+        {
+            Curar();
+        }
+        else
+        {
+            Morir();
+        }
     }
 }
