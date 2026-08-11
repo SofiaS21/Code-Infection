@@ -5,9 +5,6 @@ using UnityEngine;
 public class UIManagerMM : MonoBehaviour
 {
 
-    public string iniciarSesion
-    public string opciones
-
     // Start is called before the first frame update
     void Start()
     {
