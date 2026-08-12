@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SlotUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Image imagenIcono;
+
+    public void ActualizarSlot(ItemData nuevoItem)
     {
-        
+        if (nuevoItem != null)
+        {
+            imagenIcono.sprite = nuevoItem.icono;
+            imagenIcono.enabled = true; // Muestra la imagen
+        }
+        else
+        {
+            LimpiarSlot();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LimpiarSlot()
     {
-        
+        imagenIcono.sprite = null;
+        imagenIcono.enabled = false; 
     }
 }
