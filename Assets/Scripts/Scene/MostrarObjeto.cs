@@ -22,8 +22,7 @@ public class MostrarObjeto : MonoBehaviour
         {
             Debug.Log("Recogido " + gameObject.name );
 
-            //Agregar al inventario
-            Destroy(gameObject);
+           (ejecutar animacion)
         }
     }
 

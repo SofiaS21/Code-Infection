@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; 
 
-public class camaras : MonoBehaviour
+public class Camaras : MonoBehaviour
 {
     public Camera[] camaras;
     public GameObject panelCamaras;
-    public TMPro.textMeshProUGUI nombreCamaraTexto;
+    public TMPro.TextMeshProUGUI nombreCamaraTexto;
 
     int indiceActual = 0;
 
@@ -20,9 +21,9 @@ public class camaras : MonoBehaviour
 
     void Update()
     {
-        if (!panelCamaras.activeself) return; // si no está activo, ignoramos input
+        if (!panelCamaras.activeSelf) return; // si no está activo, ignoramos input
 
-        if (Input.GetKeyDown(Keycode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             CambiarCamara(1);
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
