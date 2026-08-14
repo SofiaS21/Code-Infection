@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIManagerMM : MonoBehaviour
 {
     public GameObject opcionesPanel;
+    public GameObject cerrarPanel;
 
 
     // Start is called before the first frame update
@@ -17,5 +18,10 @@ public class UIManagerMM : MonoBehaviour
 
         opcionesPanel.SetActive(true);
 
+    }
+
+    public void Cerrar()
+    {
+        opcionesPanel.SetActive(false);
     }
 }

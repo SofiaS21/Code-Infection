@@ -6,7 +6,7 @@ public class MostrarObjeto : MonoBehaviour
 {
     public GameObject canvasE;
     public CanvasGroup canvasGroup;
-
+    public ItemData item;
 
     bool jugadorCerca;
 
