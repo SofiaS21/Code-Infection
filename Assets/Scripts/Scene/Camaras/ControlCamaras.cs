@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro; 
+﻿using UnityEngine;
+using TMPro;
 
-public class Camaras : MonoBehaviour
+public class ControlCamaras : MonoBehaviour
 {
     public Camera[] camaras;
-    public GameObject panelCamaras;
-    public TMPro.TextMeshProUGUI nombreCamaraTexto;
+    public GameObject panelCamaras; 
+    public GameObject panelInventario; 
+    public TextMeshProUGUI textoNombreCamara; // SOLO el texto de arriba
 
     int indiceActual = 0;
 
@@ -21,7 +20,7 @@ public class Camaras : MonoBehaviour
 
     void Update()
     {
-        if (!panelCamaras.activeSelf) return; // si no está activo, ignoramos input
+        if (!panelCamaras.activeSelf) return; // si el panel está cerrado, ignoramos flechas
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             CambiarCamara(1);
@@ -33,6 +32,7 @@ public class Camaras : MonoBehaviour
     public void Activar()
     {
         panelCamaras.SetActive(true);
+        panelInventario.SetActive(false);
         MostrarCamara(indiceActual);
     }
 
@@ -40,11 +40,12 @@ public class Camaras : MonoBehaviour
     {
         camaras[indiceActual].enabled = false;
         panelCamaras.SetActive(false);
+        panelInventario.SetActive(false);
     }
 
     void CambiarCamara(int direccion)
     {
-        camaras[indiceActual].enabled = false;
+        camaras[indiceActual].enabled = false; // apagamos la vieja
 
         indiceActual += direccion;
         if (indiceActual >= camaras.Length) indiceActual = 0;
@@ -56,9 +57,6 @@ public class Camaras : MonoBehaviour
     void MostrarCamara(int i)
     {
         camaras[i].enabled = true;
-
-        if (nombreCamaraTexto != null)
-            nombreCamaraTexto.text = "CAM " + (i + 1) + " - " + camaras[i].name;
+        textoNombreCamara.text = "CAMARA " + (i + 1); // se actualiza SOLO el texto
     }
-
 }
