@@ -241,10 +241,9 @@ GameObject:
   - component: {fileID: 8006904620303485023}
   - component: {fileID: 8006904620303485020}
   - component: {fileID: 8006904620303485021}
-  - component: {fileID: 8006904620303485018}
   - component: {fileID: 4520094225852799976}
   m_Layer: 5
-  m_Name: UI - MirarCamaras (1)
+  m_Name: UI - PanelE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,18 +330,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8006904620303485018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8006904620303485016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92d2d73da121f95468a6bdc540a41ec8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!225 &4520094225852799976
 CanvasGroup:
   m_ObjectHideFlags: 0

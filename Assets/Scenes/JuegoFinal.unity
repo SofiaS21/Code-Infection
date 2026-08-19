@@ -2087,6 +2087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f78edefb8cf51045a9f07f4aa576285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasE: {fileID: 0}
+  item: {fileID: 0}
 --- !u!1 &1170819666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3199,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI - Recolectar
       objectReference: {fileID: 0}
+    - target: {fileID: 8006904620303485016, guid: 4927c6e51645a974e907eeac0034c02f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8006904620303485019, guid: 4927c6e51645a974e907eeac0034c02f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3392,6 +3399,24 @@ Transform:
   m_Father: {fileID: 936482797}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 24.167002, y: -25.169, z: 0}
+--- !u!1 &1883302623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8006904620303485016, guid: 4927c6e51645a974e907eeac0034c02f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1806634199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1883302626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883302623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d2d73da121f95468a6bdc540a41ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1892348249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b1bf83d32e3fe924dbc796abdf91de06,
@@ -3890,6 +3915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f78edefb8cf51045a9f07f4aa576285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasE: {fileID: 0}
+  item: {fileID: 0}
 --- !u!1001 &2124287587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4010,3 +4037,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f78edefb8cf51045a9f07f4aa576285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasE: {fileID: 1883302623}
+  item: {fileID: 11400000, guid: df99f5c8fc1078d4ab8a1e4cc6437ad6, type: 2}
