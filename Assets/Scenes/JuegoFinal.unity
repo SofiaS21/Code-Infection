@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3715,7 +3715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2023281325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3811,11 +3811,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f046e182fb22a7e4cab984a4671d0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   slotsUI:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1156963192}
+  - {fileID: 1621898009}
+  - {fileID: 797297796}
 --- !u!1 &2034191630
 GameObject:
   m_ObjectHideFlags: 0
