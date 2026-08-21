@@ -6,7 +6,7 @@ public class ControlCamaras : MonoBehaviour
     public Camera[] camaras;
     public GameObject panelCamaras; 
     public GameObject panelInventario; 
-    public TextMeshProUGUI textoNombreCamara; // SOLO el texto de arriba
+    public TextMeshProUGUI textoNombreCamara;
 
     int indiceActual = 0;
 
@@ -22,10 +22,10 @@ public class ControlCamaras : MonoBehaviour
     {
         if (!panelCamaras.activeSelf) return; // si el panel está cerrado, ignoramos flechas
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.RightArrow)) 
             CambiarCamara(1);
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
             CambiarCamara(-1);
     }
 

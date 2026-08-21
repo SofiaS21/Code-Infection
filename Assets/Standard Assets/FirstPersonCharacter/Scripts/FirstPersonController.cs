@@ -55,7 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+            m_MouseLook.Init(transform , m_Camera.transform);
         }
 
 
@@ -204,9 +204,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void GetInput(out float speed)
         {
-            // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            // Captura exclusiva de WASD evitando las flechas de dirección
+            float horizontal = 0f;
+            float vertical = 0f;
+
+            if (Input.GetKey(KeyCode.A)) horizontal -= 1f;
+            if (Input.GetKey(KeyCode.D)) horizontal += 1f;
+            if (Input.GetKey(KeyCode.S)) vertical -= 1f;
+            if (Input.GetKey(KeyCode.W)) vertical += 1f;
 
             bool waswalking = m_IsWalking;
 
