@@ -30,7 +30,6 @@ public class PickItem : MonoBehaviour
             if (agregado)
             {
                 Debug.Log("Recogido " + gameObject.name);
-                Destroy(gameObject);
             }
             else
             {
