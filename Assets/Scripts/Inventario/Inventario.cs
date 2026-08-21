@@ -18,6 +18,38 @@ public class Inventario : MonoBehaviour
         canvasInvLleno.SetActive(false);
     }
 
+    void Update()
+    {
+        
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+            {
+                EquiparItem(i);
+            }
+        }
+    }
+
+     void EquiparItem(int index)
+    {
+        if (items[index] == null) return; // si hay slot vacio
+
+        if (modelObjetoEquipado != null)
+        {
+            Destroy(modelObjetoEquipado);
+        }
+
+        // Si el item tiene modelo asignado
+        if (items[index].modeloEnMano != null)
+        {
+            modelObjetoEquipado = Instantiate(
+                items[index].modeloEnMano,
+                objetoEnMano.position,
+                objetoEnMano.rotation,
+                objetoEnMano
+            );
+        }
+    }
 
      void Awake()
     {
